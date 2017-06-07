@@ -1,6 +1,6 @@
 ﻿#pragma once
-#include <MMDFileParser/reader_helper.h>
-#include <MMDFileParser/vmd_struct.h>
+#include <MMDFileParser/ParserHelper.hpp>
+#include <MMDFileParser/VMDStruct.hpp>
 #include <memory>
 
 namespace MMDFileParser

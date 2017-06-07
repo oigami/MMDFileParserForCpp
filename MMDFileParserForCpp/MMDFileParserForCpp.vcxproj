@@ -146,13 +146,13 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="MMDFileParser\mmd_file_parser_exception.h" />
-    <ClInclude Include="MMDFileParser\pmd_reader.h" />
-    <ClInclude Include="MMDFileParser\pmd_struct.h" />
-    <ClInclude Include="MMDFileParser\reader_helper.h" />
-    <ClInclude Include="MMDFileParser\vmd_reader.h" />
-    <ClInclude Include="MMDFileParser\vmd_struct.h" />
-    <ClInclude Include="MMDFileParser\vmd_writer.h" />
+    <ClInclude Include="MMDFileParser\MMDFileParserException.hpp" />
+    <ClInclude Include="MMDFileParser\PMDReader.hpp" />
+    <ClInclude Include="MMDFileParser\PMDStruct.hpp" />
+    <ClInclude Include="MMDFileParser\ParserHelper.hpp" />
+    <ClInclude Include="MMDFileParser\VMDReader.hpp" />
+    <ClInclude Include="MMDFileParser\VMDStruct.hpp" />
+    <ClInclude Include="MMDFileParser\VMDWriter.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
@@ -160,9 +160,9 @@
     <ClCompile Include="src\BinaryReader.cpp" />
     <ClCompile Include="src\BinaryWriter.cpp" />
     <ClInclude Include="src\Detail\Helper.h" />
-    <ClCompile Include="src\PMD\pmd_reader.cpp" />
-    <ClCompile Include="src\VMD\vmd_reader.cpp" />
-    <ClCompile Include="src\VMD\vmd_writer.cpp" />
+    <ClCompile Include="src\PMD\PMDReader.cpp" />
+    <ClCompile Include="src\VMD\VMDReader.cpp" />
+    <ClCompile Include="src\VMD\VMDWriter.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

@@ -1,7 +1,7 @@
-﻿#include <MMDFileParser/vmd_reader.h>
-#include <MMDFileParser/reader_helper.h>
+﻿#include <MMDFileParser/VMDReader.hpp>
+#include <MMDFileParser/ParserHelper.hpp>
 #include <memory>
-#include "MMDFileParser/mmd_file_parser_exception.h"
+#include "MMDFileParser/MMDFileParserException.hpp"
 #include "src/Detail/Helper.h"
 
 namespace MMDFileParser

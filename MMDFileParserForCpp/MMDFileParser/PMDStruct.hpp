@@ -1,8 +1,7 @@
 ﻿#pragma once
 #include <cstdint>
 #include <vector>
-#include <MMDFileParser/reader_helper.h>
-#include "vmd_struct.h"
+#include <MMDFileParser/ParserHelper.hpp>
 
 namespace MMDFileParser
 {

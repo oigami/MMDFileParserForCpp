@@ -1,7 +1,7 @@
 ﻿#include "pch.h"
-#include <MMDFileParser/vmd_reader.h>
+#include <MMDFileParser/VMDReader.hpp>
 #include <experimental/filesystem>
-#include "MMDFileParser/vmd_writer.h"
+#include "MMDFileParser/VMDWriter.hpp"
 namespace filesystem = std::experimental::filesystem;
 
 TEST(VMDReader, HeaderCheck)

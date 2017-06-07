@@ -1,7 +1,7 @@
-﻿#include <MMDFileParser/pmd_reader.h>
-#include<MMDFileParser/reader_helper.h>
+﻿#include <MMDFileParser/PMDReader.hpp>
+#include <MMDFileParser/ParserHelper.hpp>
 #include "src/Detail/Helper.h"
-#include "MMDFileParser/mmd_file_parser_exception.h"
+#include <MMDFileParser/MMDFileParserException.hpp>
 
 namespace MMDFileParser
 {
@@ -10,7 +10,7 @@ namespace MMDFileParser
     template<class T>
     void ReadOrThrow(IReader& reader, T& t, const std::string err_msg)
     {
-      if ( !Read(reader, t) )
+      if ( !detail::Read(reader, t) )
         throw MMDFileParserException(err_msg, reader.getPos());
     }
   }
