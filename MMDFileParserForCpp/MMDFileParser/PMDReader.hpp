@@ -4,7 +4,7 @@
 
 namespace MMDFileParser
 {
-  class PMDReader : public pmd_struct::PMDStruct
+  class PMDReader : public PMDStruct
   {
 
     bool has_englishName;

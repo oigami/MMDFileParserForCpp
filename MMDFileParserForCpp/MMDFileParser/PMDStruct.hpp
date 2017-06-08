@@ -9,10 +9,10 @@ namespace MMDFileParser
   {
 #pragma pack(push, 1)
 
-    static_assert(std::is_pod<math::Float3>::value, "");
+    static_assert(std::is_trivially_copyable<math::Float3>::value, "");
     static_assert(sizeof(math::Float3) == sizeof(float[3]), "");
 
-    static_assert(std::is_pod<math::Float2>::value, "");
+    static_assert(std::is_trivially_copyable<math::Float2>::value, "");
     static_assert(sizeof(math::Float2) == sizeof(float[2]), "");
 
     /// PMD構造体定義
@@ -178,23 +178,23 @@ namespace MMDFileParser
     using SkinIndices = Array<std::uint16_t>;
     using BoneDispNames = Array<BoneDispName>;
     using BoneDisps = Array<BoneDisp>;
-
-    struct PMDStruct
-    {
-      pmd_struct::Header m_header_;
-      pmd_struct::Vertices m_vertices;
-      pmd_struct::Faces m_faces;
-      pmd_struct::Materials m_materials;
-      pmd_struct::Bones m_bones;
-      pmd_struct::IkData m_ikData;
-      pmd_struct::RigidBodies m_rigidBodies;
-      pmd_struct::Joints m_joints;
-      pmd_struct::SkinData m_skinData;
-      pmd_struct::SkinIndices m_skinIndices;
-      pmd_struct::BoneDispNames m_boneDispNames;
-      pmd_struct::BoneDisps m_boneDisps;
-      pmd_struct::EnglishName m_englishName;
-    };
-
   }
+
+  struct PMDStruct
+  {
+    pmd_struct::Header m_header_;
+    pmd_struct::Vertices m_vertices;
+    pmd_struct::Faces m_faces;
+    pmd_struct::Materials m_materials;
+    pmd_struct::Bones m_bones;
+    pmd_struct::IkData m_ikData;
+    pmd_struct::RigidBodies m_rigidBodies;
+    pmd_struct::Joints m_joints;
+    pmd_struct::SkinData m_skinData;
+    pmd_struct::SkinIndices m_skinIndices;
+    pmd_struct::BoneDispNames m_boneDispNames;
+    pmd_struct::BoneDisps m_boneDisps;
+    pmd_struct::EnglishName m_englishName;
+  };
+
 }
