@@ -18,7 +18,7 @@ def Compile(command):
 def MakeCommand(vsVersion, platform, configuration, runtimeLibraryType):
     cmd = msbuildPath +\
         " ../../MMDFileParserForCpp/MMDFileParserForCpp.vcxproj /p:configuration={1} "\
-        "/p:OutDir=../nuget/work/lib/native/{0}/lib/ /p:Platform=\"{0}\" "\
+        "/p:OutDir=../nuget/Output/lib/native/{0}/lib/ /p:Platform=\"{0}\" "\
         "/p:Targetname={2} /p:PlatformToolset={3} "
 
     targetName = "MMDFileParserForCpp-{}-{}{}".format(vsVersion, runtimeLibraryType,
@@ -36,16 +36,16 @@ if os.path.exists(outputDir):
 os.mkdir(outputDir)
 
 os.chdir("Output")
-os.makedirs("build/native/include/MMDFileParser/MMDFileParser")
+os.makedirs("build/native/")
 
 # nugetヘッダのコピー
 shutil.copy("../MMDFileParserForCpp.nuspec", "./")
-shutil.copy("../MMDFileParserForCpp.targets", "./build/native")
+shutil.copy("../MMDFileParserForCpp.targets", "./build/native/MMDFileParserForCpp-vc141.targets")
 
 # ヘッダファイルのコピー
 shutil.copytree("../../MMdFileParserForCpp/MMDFileParser/",
-                "./lib/native/include/MMDFileParser/MMDFileParser")
-shutil.copy("../../MMdFileParserForCpp/MMDFileParser.hpp", "./lib/native/include/MMDFileParser")
+                "./lib/native/include/MMDFileParser/")
+shutil.copy("../../MMdFileParserForCpp/MMDFileParser.hpp", "./lib/native/include/")
 
 # プロジェクトのビルド
 print("echo Compile VS15")

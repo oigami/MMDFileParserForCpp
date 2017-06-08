@@ -4,22 +4,28 @@
 #include <MMDFileParser/VMDWriter.hpp>
 #include <MMDFileParser/PMDReader.hpp>
 
-#ifdef NDEBUG
+#define VS_COMPILER_VER "v141"
 
-# ifdef _DLL
-#pragma comment(lib,"MMDFileParserForCpp-MD.lib")
-# else
-#pragma comment(lib,"MMDFileParserForCpp-MT.lib")
-# endif
+#ifdef _DLL
+
+#define RUNTIME_LIBRARY "MD"
 
 #else
 
-# ifdef _DLL
-#pragma comment(lib,"MMDFileParserForCpp-MD-d.lib")
-# else
-#pragma comment(lib,"MMDFileParserForCpp-MT-d.lib")
-# endif
+#define RUNTIME_LIBRARY "MT"
 
 #endif
 
 
+#ifdef NDEBUG
+
+#pragma comment(lib,"MMDFileParserForCpp-" VS_COMPILER_VER "-" RUNTIME_LIBRARY ".lib")
+
+#else
+
+#pragma comment(lib,"MMDFileParserForCpp-" VS_COMPILER_VER "-" RUNTIME_LIBRARY "-d.lib")
+
+#endif
+
+#undef RUNTIME_LIBRARY
+#undef VS_COMPILER_VER

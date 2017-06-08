@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0"?>
-<package>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
     <metadata>
         <id>MMDFileParserForCpp-vc141</id>
         <title>MMD File Parser for C++</title>
-        <version>0.1.0-alpha1</version>
+        <version>0.1.0-alpha2</version>
         <authors>oigami</authors>
         <owners>oigami</owners>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
