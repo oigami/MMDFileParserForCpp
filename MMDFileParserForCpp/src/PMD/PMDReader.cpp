@@ -135,7 +135,7 @@ namespace MMDFileParser
       ReadOrThrow(reader, tmp.comment, "PMD english comment read error."); // コメント
 
       // ボーンリスト
-      if ( !ReadArray(reader, m_bones.size(), tmp.boneName) )
+      if ( !ReadArray(reader, static_cast<int>(m_bones.size()), tmp.boneName) )
       {
         throw MMDFileParserException("PMD english bone name read error.", reader.getPos());
       }
@@ -150,7 +150,7 @@ namespace MMDFileParser
       }
 
       // ボーン枠用枠名リスト
-      if ( !ReadArray(reader, numBoneDispName, tmp.boneDispName) )
+      if ( !ReadArray(reader, static_cast<int>(numBoneDispName), tmp.boneDispName) )
       {
         throw MMDFileParserException("PMD english bone disp name read error.", reader.getPos());
       }

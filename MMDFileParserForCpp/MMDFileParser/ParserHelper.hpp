@@ -7,6 +7,7 @@ namespace MMDFileParser
 {
   namespace math
   {
+#pragma warning(disable:4201)
     template<class T> struct Vector2D
     {
       union
@@ -63,13 +64,14 @@ namespace MMDFileParser
     using Float4 = Vector4D<float>;
     static_assert(sizeof(Float4) == sizeof(float) * 4, "");
 
+#pragma warning(default:4201)
   }
 
   class IReader
   {
   public:
 
-    virtual size_t read(void* buf, int size) = 0;
+    virtual size_t read(void* buf, size_t size) = 0;
     virtual size_t getPos() const = 0;
 
   protected:
@@ -81,7 +83,7 @@ namespace MMDFileParser
   {
   public:
 
-    virtual bool write(const void* buf, int size) = 0;
+    virtual bool write(const void* buf, size_t size) = 0;
     virtual size_t getPos() const = 0;
 
   protected:
@@ -103,7 +105,7 @@ namespace MMDFileParser
     template<class Stream, std::enable_if_t<std::is_base_of<std::istream, Stream>::value>* = nullptr>
     explicit BinaryReader(Stream&& stream) : stream_(std::make_shared<Stream>(std::move(stream))) {}
 
-    size_t read(void* buf, int size) override;
+    size_t read(void* buf, size_t size) override;
 
     size_t getPos() const override;
   };
@@ -118,7 +120,7 @@ namespace MMDFileParser
 
     explicit BinaryWriter(const FilePath& path);
 
-    bool write(const void* buf, int size) override;
+    bool write(const void* buf, size_t size) override;
     size_t getPos() const override;
   };
 

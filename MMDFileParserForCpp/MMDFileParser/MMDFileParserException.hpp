@@ -5,20 +5,20 @@ namespace MMDFileParser
 {
   class MMDFileParserException :public std::runtime_error
   {
-    int m_pos;
+    size_t m_pos;
   public:
 
-    explicit MMDFileParserException(const std::string& message, int pos)
+    explicit MMDFileParserException(const std::string& message, size_t pos)
       : runtime_error(message), m_pos(pos)
     {
     }
 
-    explicit MMDFileParserException(const char* message, int pos)
+    explicit MMDFileParserException(const char* message, size_t pos)
       : runtime_error(message), m_pos(pos)
     {
     }
 
 
-    int ErrorPos()const { return m_pos; }
+    size_t ErrorPos()const { return m_pos; }
   };
 }

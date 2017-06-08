@@ -10,7 +10,7 @@ namespace MMDFileParser
     {
 
       template<class T, std::enable_if_t<std::is_trivially_copyable<T>::value>* = nullptr>
-      size_t ReadArray(IReader& reader, const size_t numOfArrayElements, std::vector<T>& arr)
+      size_t ReadArray(IReader& reader, int numOfArrayElements, std::vector<T>& arr)
       {
         arr.resize(numOfArrayElements);
         if ( numOfArrayElements == 0 ) return 0;
