@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>NuGetTrial</id>
+        <title>MMD File Parser for C++</title>
+        <version>1.0.0</version>
+        <authors>oigami</authors>
+        <owners>oigami</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <summary>MMDのファイルを扱うためのライブラリです</summary>
+        <description>MMDのファイルを扱うためのライブラリです</description>
+        <releaseNotes>Ver. 1.00: 初版</releaseNotes>
+        <copyright>Copyright(C) 2017 oigami</copyright>
+        <tags>C++ MikuMikuDance MMD</tags>
+        <language>ja-JP</language>
+    </metadata>
+</package>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" 
+  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets"/>
+  <PropertyGroup></PropertyGroup>
+  <ItemDefinitionGroup>
+    <!-- プロジェクトファイルの「構成プロパティ」→「C++」に該当します。 -->
+    <ClCompile>
+      <!-- マクロを「HAS_NUGETTRIAL」を定義します。 -->
+      <PreprocessorDefinitions>HAS_MMD_FILE_PARSER_FOR_CPP;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <!-- 追加のインクルードディレクトリに追加するフォルダーを指定します。 -->
+      <AdditionalIncludeDirectories>$(MSBuildThisFileDirectory)../../lib/native/include/;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='Win32'">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\native\Win32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Platform)'=='x64'">
+    <Link>
+      <AdditionalLibraryDirectories>$(MSBuildThisFileDirectory)..\..\lib\native\x64\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+</Project>
