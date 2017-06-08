@@ -260,3 +260,5 @@ paket-files/
 __pycache__/
 *.pyc
 nuget/work/lib/native/include/
+GTest1/Release*/
+nuget/Output/

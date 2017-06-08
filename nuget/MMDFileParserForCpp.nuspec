@@ -1,0 +1,18 @@
+﻿<?xml version="1.0"?>
+<package>
+    <metadata>
+        <id>MMDFileParserForCpp-vc141</id>
+        <title>MMD File Parser for C++</title>
+        <version>0.1.0-alpha1</version>
+        <authors>oigami</authors>
+        <owners>oigami</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <summary>MMDのファイルを扱うためのライブラリです</summary>
+        <description>MMDのファイルを扱うためのライブラリです</description>
+        <releaseNotes>Ver. 0.1.0-alpha1: 初版</releaseNotes>
+        <projectUrl>https://github.com/oigami/MMDFileParserForCpp</projectUrl>
+        <copyright>Copyright(C) 2017 oigami</copyright>
+        <tags>C++ MikuMikuDance MMD vc141</tags>
+        <language>ja-JP</language>
+    </metadata>
+</package>
